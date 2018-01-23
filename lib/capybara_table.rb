@@ -27,7 +27,7 @@ module CapybaraTable
     end
 
     def header_position(header)
-      header_node = ancestor(:table)[1].descendant(:tr)[1].descendant(:th)[string.n.is(header)]
+      header_node = ancestor(:table)[1].descendant(:tr, :thead)[1].descendant(:th)[string.n.is(header)]
       cell_position(header_node)
     end
 
